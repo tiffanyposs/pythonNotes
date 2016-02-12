@@ -676,5 +676,100 @@ else:
 ```
 
 
+##Advanced Topics
 
-[hi](http://www.tutorialspoint.com/python/python_networking.htm)
+###Iterators for Dictionaries
+
+####.items()
+
+`.items()` makes an array of tuples
+
+```
+my_dict = {
+   "Name" : "Tiffany",
+   "Age" : 27,
+   "BDFL" : True
+}
+
+print my_dict.items()
+
+```
+
+####.keys() and .values()
+Makes an array of the keys or values from a dictionary
+
+```
+my_dict = {
+   "Name" : "Tiffany",
+   "Age" : 27,
+   "BDFL" : True
+}
+
+print my_dict.keys()
+print my_dict.values()
+
+```
+
+
+####for loops with dictionaries
+
+```
+my_dict = {
+   "Name" : "Tiffany",
+   "Age" : 27,
+   "BDFL" : True
+}
+
+
+for key in my_dict:
+    print key, my_dict[key]
+
+```
+
+####List Comprehension
+`double_by_3` below will double all the numbers from 1-5 if they are evenly divisible by 3
+
+```
+doubles_by_3 = [x*2 for x in range(1,6) if (x*2) % 3 == 0]
+
+```
+
+
+###Lists
+
+####List Slicing
+
+`[start:end:stride]` is the formatting for list slicing, first number represents the start index, second represents the end index and the stride is how many indexes it goes up per step
+
+```
+listSlice = range(20)
+
+print listSlice
+print listSlice[4:15:2]
+
+```
+
+You can also omit parts of the indices
+
+```
+my_list = range(1, 11) # List of numbers 1 - 10
+
+
+print my_list[2:] #two and after
+
+print my_list[:3] #up until 3
+
+print my_list[::2] #every other
+
+```
+
+#####Reversing a List, negative stride
+You can also go through the array backwards by having a negative stride.
+
+```
+my_list = range(1,11)
+
+print my_list[::-1] #counts down from 10
+
+```
+
