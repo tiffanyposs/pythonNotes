@@ -773,3 +773,60 @@ print my_list[::-1] #counts down from 10
 
 ```
 
+
+###Lambdas
+
+Lambdas are like an anonymous functions.
+
+```
+lambda x: x / 5
+
+"Is the same as"
+
+def by_five(x):
+    return x / 5
+
+```
+
+You can pass the `lambda` to `filter` and it will to determine what to filter. Below will print all the numbers in my_list that are divisible by 5 evenly.
+
+```
+my_list = range(20)
+print filter(lambda x: x % 5 == 0, my_list)
+
+```
+
+Lambdas are good when you need a quick function to do some work for you but don't really need to reuse again
+
+Below will get the square of numbers 1-10 and then will filter those numbers that are greater than 30 and less than 70
+
+```
+squares = [x**2 for x in range(1, 11)]
+print filter(lambda x: x >= 30 and x <= 70, squares)
+
+```
+
+
+###.items()
+
+This will convert a dictionary into an array
+
+```
+movies = {
+    "Pulp Fiction": "Great",
+    "Amelie": "Great",
+    "Toy Story": "Great"
+}
+
+print movies.items()
+
+```
+
+###Comprehensions
+
+You can write a statement like the below. This statment will create a range 1 - 15 and if the number is divisible by 3 or 5 evenly it will return that number in an array
+
+```
+threes_and_fives = [x for x in range(1, 16) if x % 3 == 0 or x % 5 == 0]
+
+```
